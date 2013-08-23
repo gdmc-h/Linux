@@ -1,0 +1,18 @@
+#!/bin/sh
+/usr/bin/fluxbox &
+fluxpid=$!
+
+fbsetbg ~/Immagini/fluxbox/4.jpg &
+xcompmgr -c &
+conky &
+conky -c .conky/.conkyrc &
+nm-applet &
+gnome-volume-manager &
+xscreensaver -nosplash &
+esd -nobeeps -noterminate &
+gnome-power-manager &
+fbpager &
+thunderbird &
+terminator &
+
+wait $fluxpid
