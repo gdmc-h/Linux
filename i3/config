@@ -1,0 +1,74 @@
+#---------------------------
+#  i3 Config by JustHvost
+#---------------------------
+
+new_window pixel 1
+
+client.focused #eeeeee #eeeeee #000000 #2e9ef4
+client.focused_inactive #000000 #222222 #ffffff #22222
+client.unfocused #000000 #222222 #ffffff #292d2e
+client.urgent #2f343a #900000 #ffffff #900000
+
+set $mod Mod4
+
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:DroidSans 9
+
+floating_modifier $mod
+focus_follows_mouse no
+
+bindsym $mod+Return exec i3-sensible-terminal
+
+bindsym $mod+F1 exec thunar
+bindsym $mod+F2 exec firefox
+bindsym $mod+F3 exec sayonara
+bindsym $mod+F4 exec thunderbird
+
+bindsym $mod+Shift+q kill
+
+bindsym $mod+d exec dmenu_run
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move rightbindsym $mod+Shift+space floating toggle
+
+bindsym $mod+space focus mode_toggle
+
+bindsym $mod+1 workspace Main
+bindsym $mod+2 workspace Music
+bindsym $mod+3 workspace Coding
+bindsym $mod+4 workspace Other
+
+bindsym $mod+Shift+1 move container to workspace Main
+bindsym $mod+Shift+2 move container to workspace Music
+bindsym $mod+Shift+3 move container to workspace Coding
+bindsym $mod+Shift+4 move container to workspace Other
+
+bindsym $mod+Up exec amixer -q set Master 2dB+ unmute
+bindsym $mod+Down exec amixer -q set Master 2dB- unmute
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-ms$
+bar {
+        status_command i3status --config ~/.i3/i3status.conf
+        position top
+        colors {
+              background #313131
+              statusline #eeeeee
+              focused_workspace #bdc3c7 #ecf0f1 #000000
+              active_workspace #333333 #567DBB #ffffff
+              inactive_workspace #333333 #5F676A #000000
+              urgent_workspace #2f343a #900000 #ffffff
+            }
+}
+
+
+exec fbsetbg Immagini/f.jpg
+exec nm-applet
+exec terminator
+exec thunderbird
+
+hide_edge_borders vertical
+
