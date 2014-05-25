@@ -1,0 +1,9 @@
+Archy ZSH theme 1a
+
+Requirements:
+
++ screenfetch
+
+Requirements, the copy-pasterino way:
+
+# pacman -S screenfetch

@@ -1,1 +1,19 @@
-I'm still working on this.
+Version 1b
+
+Requirements:
+
++ tilda 
++ unclutter
++ dmenu
++ Droid Sans
++ feh
+
+Requirements, the copy-pasterino way:
+
+# pacman -S tilda unclutter dmenu feh 
+$ yaourt ttf-droid-sans
+
+Troubles:
+
+Q: I have an error about i3config
+A: Just chmod it
