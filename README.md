@@ -1,4 +1,4 @@
 Linux
 =====
 
-All my Linux settings
+These are my ArchLinux settings, you 'em as you wish
